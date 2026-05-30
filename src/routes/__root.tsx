@@ -81,12 +81,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "FutureSafe Insurance Services — Independent Insurance Advisors" },
-      {
-        name: "description",
-        content:
-          "Independent insurance advisors. Compare health, life, and motor insurance from top insurers. Free quotes, expert guidance, claims support.",
-      },
       { name: "author", content: "FutureSafe Insurance Services" },
       { property: "og:site_name", content: "FutureSafe Insurance Services" },
       { property: "og:type", content: "website" },
