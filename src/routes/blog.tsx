@@ -72,6 +72,25 @@ export const Route = createFileRoute("/blog")({
       { property: "og:url", content: "/blog" },
     ],
     links: [{ rel: "canonical", href: "/blog" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Blog",
+          name: "FutureSafe Insurance Blog",
+          url: "/blog",
+          description: "Plain-English guides on health, life, motor, and business insurance.",
+          blogPost: posts.map((p) => ({
+            "@type": "BlogPosting",
+            headline: p.title,
+            description: p.excerpt,
+            datePublished: p.date,
+            articleSection: p.category,
+          })),
+        }),
+      },
+    ],
   }),
   component: Blog,
 });
