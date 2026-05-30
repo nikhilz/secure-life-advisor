@@ -1,0 +1,15 @@
+# FutureSafe Insurance Services
+
+> Independent insurance advisors comparing health, life, and motor insurance from 30+ insurers, with free quotes, premium calculators, and claims support.
+
+## Pages
+
+- [Home](/): Overview, services, premium calculator, and quote request.
+- [About](/about): Who we are and how we work.
+- [Services](/services): Full list of insurance lines we advise on.
+- [Health Insurance](/health-insurance): Individual, family, and group health plans.
+- [Life Insurance](/life-insurance): Term, whole, and savings-linked life cover.
+- [Motor Insurance](/motor-insurance): Car and two-wheeler cover with roadside assistance.
+- [Blog](/blog): Plain-English guides on insurance topics.
+- [FAQ](/faq): Common questions about cover, claims, and pricing.
+- [Contact](/contact): Get in touch or request a free quote.

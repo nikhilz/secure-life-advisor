@@ -2,6 +2,12 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Check } from "lucide-react";
 import { QuoteForm } from "@/components/site/QuoteForm";
 
+const healthFaqs: [string, string][] = [
+  ["Can I keep my current doctor?", "Yes — we'll filter plans to only insurers whose network includes your existing providers."],
+  ["What about pre-existing conditions?", "Most plans cover them after a 2–4 year waiting period. We'll flag the shortest available."],
+  ["Do you handle claims?", "We submit, follow up, and escalate on your behalf until the claim closes."],
+];
+
 export const Route = createFileRoute("/health-insurance")({
   head: () => ({
     meta: [
@@ -16,6 +22,32 @@ export const Route = createFileRoute("/health-insurance")({
       { property: "og:url", content: "/health-insurance" },
     ],
     links: [{ rel: "canonical", href: "/health-insurance" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Service",
+              name: "Health Insurance Advisory",
+              serviceType: "Health Insurance",
+              provider: { "@type": "InsuranceAgency", name: "FutureSafe Insurance Services" },
+              description: "Compare individual, family, and group health insurance plans with cashless network hospitals, maternity, and mental health cover.",
+              areaServed: "US",
+            },
+            {
+              "@type": "FAQPage",
+              mainEntity: healthFaqs.map(([q, a]) => ({
+                "@type": "Question",
+                name: q,
+                acceptedAnswer: { "@type": "Answer", text: a },
+              })),
+            },
+          ],
+        }),
+      },
+    ],
   }),
   component: () => (
     <ProductPage
@@ -30,11 +62,7 @@ export const Route = createFileRoute("/health-insurance")({
         "Annual preventive health check-ups",
         "Critical illness add-ons (cancer, cardiac, stroke)",
       ]}
-      faqs={[
-        ["Can I keep my current doctor?", "Yes — we'll filter plans to only insurers whose network includes your existing providers."],
-        ["What about pre-existing conditions?", "Most plans cover them after a 2–4 year waiting period. We'll flag the shortest available."],
-        ["Do you handle claims?", "We submit, follow up, and escalate on your behalf until the claim closes."],
-      ]}
+      faqs={healthFaqs}
       defaultProduct="health"
     />
   ),

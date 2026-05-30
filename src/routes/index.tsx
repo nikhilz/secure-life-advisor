@@ -8,13 +8,13 @@ import { PremiumCalculator } from "@/components/site/PremiumCalculator";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "FutureSafe Insurance Services — Independent Insurance Advisors" },
+      { title: "FutureSafe — Independent Insurance Advisors" },
       {
         name: "description",
         content:
           "Compare health, life, and motor insurance from top insurers. Free expert guidance, instant premium calculator, and claims support.",
       },
-      { property: "og:title", content: "FutureSafe Insurance Services" },
+      { property: "og:title", content: "FutureSafe Insurance — Independent Advisor Comparison" },
       {
         property: "og:description",
         content:

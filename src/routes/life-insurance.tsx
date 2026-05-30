@@ -1,6 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ProductPage } from "./health-insurance";
 
+const lifeFaqs: [string, string][] = [
+  ["Term or whole life?", "If you need affordable cover during your working years, term wins. For estate planning or guaranteed payout, whole life makes sense."],
+  ["How much cover do I need?", "A common rule is 10× your annual income, but we'll model it against your debts, dependents, and existing assets."],
+  ["What if I miss a payment?", "Most policies offer a 30-day grace period. We'll set up reminders so it never happens."],
+];
+
 export const Route = createFileRoute("/life-insurance")({
   head: () => ({
     meta: [
@@ -15,6 +21,32 @@ export const Route = createFileRoute("/life-insurance")({
       { property: "og:url", content: "/life-insurance" },
     ],
     links: [{ rel: "canonical", href: "/life-insurance" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Service",
+              name: "Life Insurance Advisory",
+              serviceType: "Life Insurance",
+              provider: { "@type": "InsuranceAgency", name: "FutureSafe Insurance Services" },
+              description: "Compare term life, whole life, and savings-linked policies with hands-on claim support for beneficiaries.",
+              areaServed: "US",
+            },
+            {
+              "@type": "FAQPage",
+              mainEntity: lifeFaqs.map(([q, a]) => ({
+                "@type": "Question",
+                name: q,
+                acceptedAnswer: { "@type": "Answer", text: a },
+              })),
+            },
+          ],
+        }),
+      },
+    ],
   }),
   component: () => (
     <ProductPage
@@ -29,11 +61,7 @@ export const Route = createFileRoute("/life-insurance")({
         "Critical illness acceleration benefits",
         "Hands-on claim support for beneficiaries",
       ]}
-      faqs={[
-        ["Term or whole life?", "If you need affordable cover during your working years, term wins. For estate planning or guaranteed payout, whole life makes sense."],
-        ["How much cover do I need?", "A common rule is 10× your annual income, but we'll model it against your debts, dependents, and existing assets."],
-        ["What if I miss a payment?", "Most policies offer a 30-day grace period. We'll set up reminders so it never happens."],
-      ]}
+      faqs={lifeFaqs}
       defaultProduct="life"
     />
   ),

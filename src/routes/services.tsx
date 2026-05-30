@@ -19,6 +19,24 @@ export const Route = createFileRoute("/services")({
       { property: "og:url", content: "/services" },
     ],
     links: [{ rel: "canonical", href: "/services" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          name: "FutureSafe Insurance Services",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Health Insurance", url: "/health-insurance" },
+            { "@type": "ListItem", position: 2, name: "Life Insurance", url: "/life-insurance" },
+            { "@type": "ListItem", position: 3, name: "Motor Insurance", url: "/motor-insurance" },
+            { "@type": "ListItem", position: 4, name: "Home Insurance", url: "/contact" },
+            { "@type": "ListItem", position: 5, name: "Business Insurance", url: "/contact" },
+            { "@type": "ListItem", position: 6, name: "Travel Insurance", url: "/contact" },
+          ],
+        }),
+      },
+    ],
   }),
   component: Services,
 });
