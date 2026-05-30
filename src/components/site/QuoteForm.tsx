@@ -2,6 +2,7 @@ import { useState } from "react";
 import { z } from "zod";
 import { toast } from "sonner";
 
+const PHONE = "919029214886"; // E.164 without "+"
 const schema = z.object({
   name: z.string().trim().min(2, "Please enter your name").max(80),
   email: z.string().trim().email("Enter a valid email").max(120),
@@ -25,15 +26,42 @@ export function QuoteForm({ compact, defaultProduct = "health" }: Props) {
       product: fd.get("product"),
       message: fd.get("message") || undefined,
     });
+
     if (!parsed.success) {
       toast.error(parsed.error.issues[0]?.message ?? "Please check the form");
       return;
     }
+
+    const values = parsed.data;
+    const productLabel = {
+      health: "Health insurance",
+      life: "Life insurance",
+      motor: "Motor insurance",
+      other: "Other",
+    }[values.product];
+
+    const message = [
+      "New quote request",
+      `Name: ${values.name}`,
+      `Email: ${values.email}`,
+      `Phone: ${values.phone}`,
+      `Insurance type: ${productLabel}`,
+      values.message ? `Message: ${values.message}` : "Message: (none)",
+    ].join("\n");
+
+    const whatsappUrl = `https://wa.me/${PHONE}?text=${encodeURIComponent(message)}`;
+    const opened = window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+
+    if (!opened) {
+      toast.error("Unable to open WhatsApp. Please try again.");
+      return;
+    }
+
     setSubmitting(true);
     await new Promise((r) => setTimeout(r, 700));
     setSubmitting(false);
     (e.target as HTMLFormElement).reset();
-    toast.success("Thanks! An advisor will contact you within 1 business day.");
+    toast.success("WhatsApp chat opened with your quote details.");
   }
 
   return (
