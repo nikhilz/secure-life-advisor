@@ -23,14 +23,22 @@ export const Route = createFileRoute("/services")({
   component: Services,
 });
 
-const services = [
+type Service = {
+  to: "/health-insurance" | "/life-insurance" | "/motor-insurance" | "/contact";
+  icon: typeof HeartPulse;
+  title: string;
+  copy: string;
+  featured?: boolean;
+};
+
+const services: Service[] = [
   { to: "/health-insurance", icon: HeartPulse, title: "Health Insurance", copy: "Individual, family and group plans with the hospitals you trust.", featured: true },
   { to: "/life-insurance", icon: ShieldCheck, title: "Life Insurance", copy: "Term, whole, and savings-linked policies built around your family.", featured: true },
   { to: "/motor-insurance", icon: Car, title: "Motor Insurance", copy: "Comprehensive and third-party cover with 24/7 roadside assistance.", featured: true },
   { to: "/contact", icon: Home, title: "Home Insurance", copy: "Building, contents, and landlord cover for owners and renters." },
   { to: "/contact", icon: Briefcase, title: "Business Insurance", copy: "Liability, property, and group benefits for teams of all sizes." },
   { to: "/contact", icon: Plane, title: "Travel Insurance", copy: "Single-trip, multi-trip, and student travel plans with medical evac." },
-] as const;
+];
 
 function Services() {
   return (
