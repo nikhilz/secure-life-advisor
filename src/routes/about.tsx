@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Award, Heart, Scale, Users } from "lucide-react";
+import { Testimonials } from "@/components/site/Testimonials";
+import { PartnerLogosCarousel } from "@/components/site/PartnerLogosCarousel";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -65,6 +67,10 @@ function About() {
           </div>
         </div>
       </section>
+
+      <Testimonials />
+
+      <PartnerLogosCarousel />
     </>
   );
 }

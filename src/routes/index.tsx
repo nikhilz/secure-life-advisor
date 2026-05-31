@@ -3,6 +3,7 @@ import { ShieldCheck, HeartPulse, Car, Users, Clock, Award, ArrowRight } from "l
 import heroImg from "@/assets/hero-advisor.jpg";
 import { QuoteForm } from "@/components/site/QuoteForm";
 import { Testimonials } from "@/components/site/Testimonials";
+import { PartnerLogosCarousel } from "@/components/site/PartnerLogosCarousel";
 import { PremiumCalculator } from "@/components/site/PremiumCalculator";
 
 export const Route = createFileRoute("/")({
@@ -165,6 +166,8 @@ function Home() {
       </section>
 
       <Testimonials />
+
+       <PartnerLogosCarousel />
 
       {/* CTA */}
       <section className="py-20">

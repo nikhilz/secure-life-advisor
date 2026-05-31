@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X, Shield } from "lucide-react";
 import { cn } from "@/lib/utils";
+import logoImage from '@/assets/logo.jpeg';
 
 const nav = [
   { to: "/", label: "Home" },
@@ -22,9 +23,7 @@ export function Header() {
     <header className="sticky top-0 z-40 w-full border-b border-border/60 bg-background/85 backdrop-blur supports-[backdrop-filter]:bg-background/70">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center gap-2.5">
-          <span className="flex h-9 w-9 items-center justify-center rounded-md bg-brand text-brand-foreground">
-            <Shield className="h-5 w-5" />
-          </span>
+          <img src={logoImage} alt="FutureSafe Logo" className="h-9 w-9" />
           <span className="flex flex-col leading-none">
             <span className="font-serif text-lg font-bold text-foreground">FutureSafe</span>
             <span className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
