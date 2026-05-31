@@ -62,7 +62,7 @@ export function Footer() {
             </li>
             <li className="flex items-start gap-2">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0" />
-              <span>AP SHOP NO A17, PREVIA BUSSINES CENTER SANT NAGAR,  NR NEW RTO OFFICE  MOSHI Pune 412105</span>
+              <span>AP SHOP NO A17, PRIVIA BUSINESS CENTER SANT NAGAR, NR NEW RTO OFFICE, MOSHI Pune 412105</span>
             </li>
           </ul>
         </div>

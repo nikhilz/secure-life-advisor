@@ -56,12 +56,13 @@ function Contact() {
             <ContactBlock
               icon={<MapPin />}
               label="Office"
-              value="AP SHOP NO A17, PREVIA BUSSINES CENTER SANT NAGAR,  NR NEW RTO OFFICE  MOSHI Pune 412105"
+              value="AP SHOP NO A17, PRIVIA BUSINESS CENTER SANT NAGAR, NR NEW RTO OFFICE, MOSHI Pune 412105"
+              href="https://www.google.com/maps/place/Privia+Business+Centre+Pune/@18.6549363,73.8447135,17z"
             />
             <ContactBlock
               icon={<Clock />}
               label="Hours"
-              value="Mon–Sat 9am–7pm"
+              value="Mon–Sat @ 9am–7pm"
             />
           </div>
           <div className="lg:col-span-3">

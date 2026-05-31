@@ -77,47 +77,54 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 }
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
-  head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { name: "author", content: "FutureSafe Insurance Services" },
-      { property: "og:site_name", content: "FutureSafe Insurance Services" },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "theme-color", content: "#0f1b3d" },
-    ],
-    links: [
-      { rel: "stylesheet", href: appCss },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap",
-      },
-    ],
-    scripts: [
-      {
-        type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "InsuranceAgency",
-          name: "FutureSafe Insurance Services",
-          url: "/",
-          telephone: "+1-555-010-2030",
-          email: "hello@futuresafe.example",
-          address: {
-            "@type": "PostalAddress",
-            streetAddress: "221 Atlantic Ave, Suite 400",
-            addressLocality: "New York",
-            addressRegion: "NY",
-            postalCode: "10001",
-            addressCountry: "US",
-          },
-        }),
-      },
-    ],
-  }),
+  head: () => {
+    const SITE_URL = process.env.SITE_URL || "";
+    const imageUrl = SITE_URL ? `${SITE_URL}/assets/hero-advisor.jpg` : "/assets/hero-advisor.jpg";
+
+    return {
+      meta: [
+        { charSet: "utf-8" },
+        { name: "viewport", content: "width=device-width, initial-scale=1" },
+        { name: "author", content: "FutureSafe Insurance Services" },
+        { property: "og:site_name", content: "FutureSafe Insurance Services" },
+        { property: "og:type", content: "website" },
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "theme-color", content: "#0f1b3d" },
+        { property: "og:image", content: imageUrl },
+        { name: "twitter:image", content: imageUrl },
+      ],
+      links: [
+        { rel: "stylesheet", href: appCss },
+        { rel: "preconnect", href: "https://fonts.googleapis.com" },
+        { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+        {
+          rel: "stylesheet",
+          href: "https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap",
+        },
+      ],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "InsuranceAgency",
+            name: "FutureSafe Insurance Services",
+            url: SITE_URL || "/",
+            telephone: "+91-7066493999",
+            email: "operationsfuturesafe@gmail.com",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "AP SHOP NO A17, Privia Business Centre, Sant Nagar, Moshi",
+              addressLocality: "Pune",
+              addressRegion: "MH",
+              postalCode: "412105",
+              addressCountry: "IN",
+            },
+          }),
+        },
+      ],
+    };
+  },
   shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,

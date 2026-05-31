@@ -5,7 +5,7 @@ export function PremiumCalculator() {
         <div>
           <h3 className="font-serif text-xl font-bold">Our office location</h3>
           <p className="mt-2 text-sm text-muted-foreground">
-            AP SHOP NO A17, PRIVIA BUSSINESS CENTER SANT NAGAR, Nr NEW RTO OFFICE  MOSHI PUNE 412105 — exact location from your Google Maps link.
+            AP SHOP NO A17, PRIVIA BUSINESS CENTER SANT NAGAR, Nr NEW RTO OFFICE  MOSHI PUNE 412105 — exact location from your Google Maps link.
           </p>
         </div>
         <a
