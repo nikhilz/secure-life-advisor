@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 
 // Use the SITE_URL env var in production, or leave empty for local/dev.
-const BASE_URL = process.env.SITE_URL || "";
+const BASE_URL = "https://futuresafeinsurance.in";
 
 interface SitemapEntry {
   path: string;
@@ -24,6 +24,8 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/blog", changefreq: "weekly", priority: "0.7" },
           { path: "/faq", changefreq: "monthly", priority: "0.6" },
           { path: "/contact", changefreq: "yearly", priority: "0.6" },
+          { path: "/privacy-policy", changefreq: "yearly", priority: "0.3" },
+          { path: "/terms-and-conditions", changefreq: "yearly", priority: "0.3" },
         ];
 
         const urls = entries.map((e) =>
