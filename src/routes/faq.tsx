@@ -7,7 +7,7 @@ const faqs: [string, string][] = [
   ["Can you help with an existing policy?", "Yes. We frequently review policies bought elsewhere and either confirm they're a good fit or suggest a switch at renewal. There's no charge for a policy review."],
   ["What happens when I need to claim?", "Call your advisor directly. We collect the paperwork, submit the claim, and chase the insurer until it closes. You won't be passed around a call center."],
   ["Is my data safe?", "Yes. We use bank-grade encryption and only share your information with the insurers you've authorized us to approach for quotes."],
-  ["Which states do you serve?", "We're currently licensed in 12 states across the Northeast and West Coast. Submit the form on the contact page and we'll confirm coverage in your area."],
+  ["Which states do you serve?", "We're currently licensed in PAN India. Submit the form on the contact page and we'll confirm coverage in your area."],
 ];
 
 export const Route = createFileRoute("/faq")({

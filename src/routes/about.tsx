@@ -28,7 +28,7 @@ function About() {
     <>
       <PageHeader
         kicker="About FutureSafe"
-        title="Honest insurance advice, since 2008."
+        title="Honest insurance advice, since 2017."
         copy="We started FutureSafe after watching too many friends pay for cover they didn't need and miss the cover they did. Our promise is simple: independent advice, plain English, and a real human on the other end of the phone."
       />
 
@@ -37,11 +37,7 @@ function About() {
           <div>
             <h2 className="font-serif text-3xl font-bold">Our story</h2>
             <p className="mt-4 text-muted-foreground">
-              Founded by a former claims adjuster and a financial planner,
-              FutureSafe has grown from a two-person practice in Brooklyn to a
-              team of 18 licensed advisors serving clients in 12 states. We
-              remain independently owned — no insurer, bank, or holding company
-              has a stake in our recommendations.
+              Founded by <b>Kiran Prasad Raskar</b> and <b>Prasad Namdev Raskar</b>, FutureSafe has grown from a two-person practice in Moshi to a team of 18 licensed advisors serving clients all over PAN India. We remain independently owned — no insurer, bank, or holding company has a stake in our recommendations.
             </p>
             <p className="mt-4 text-muted-foreground">
               That independence is the whole point. We're paid the same whether
@@ -50,10 +46,10 @@ function About() {
             </p>
           </div>
           <div className="grid grid-cols-2 gap-4">
-            <Stat value="2008" label="Founded" />
+            <Stat value="2017" label="Founded" />
             <Stat value="4,200+" label="Households served" />
             <Stat value="18" label="Licensed advisors" />
-            <Stat value="$11M+" label="Claims recovered for clients" />
+            <Stat value="₹11Cr+" label="Claims recovered for clients" />
           </div>
         </div>
       </section>

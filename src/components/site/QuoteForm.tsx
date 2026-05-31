@@ -2,7 +2,7 @@ import { useState } from "react";
 import { z } from "zod";
 import { toast } from "sonner";
 
-const PHONE = "919029214886"; // E.164 without "+"
+const PHONE = "917066493999"; // E.164 without "+"
 const schema = z.object({
   name: z.string().trim().min(2, "Please enter your name").max(80),
   email: z.string().trim().email("Enter a valid email").max(120),
@@ -78,9 +78,9 @@ export function QuoteForm({ compact, defaultProduct = "health" }: Props) {
       </p>
 
       <div className="mt-5 grid gap-4 sm:grid-cols-2">
-        <Field name="name" label="Full name" placeholder="Jane Doe" required />
-        <Field name="email" type="email" label="Email" placeholder="jane@example.com" required />
-        <Field name="phone" label="Phone" placeholder="+1 555 010 2030" required />
+        <Field name="name" label="Full name" placeholder="John Doe" required />
+        <Field name="email" type="email" label="Email" placeholder="john@example.com" required />
+        <Field name="phone" label="Phone" placeholder="+91 9876543210" required />
         <div className="flex flex-col gap-1.5">
           <label htmlFor="product" className="text-xs font-medium text-foreground">
             Insurance type

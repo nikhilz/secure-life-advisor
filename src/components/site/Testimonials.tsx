@@ -3,14 +3,14 @@ import { Star } from "lucide-react";
 const items = [
   {
     quote:
-      "FutureSafe found us a family health plan that saved us $1,800 a year and actually covers our pediatrician. Painless process from start to finish.",
-    name: "Priya & Marcus R.",
+      "FutureSafe found us a family health plan that saved us ₹18,000 a year and actually covers our pediatrician. Painless process from start to finish.",
+    name: "Priya & Mohan R.",
     role: "Family of 4, Brooklyn",
   },
   {
     quote:
       "After a fender-bender my agent had a rental arranged before I left the scene. That's the difference a real advisor makes.",
-    name: "David L.",
+    name: "Amit L.",
     role: "Motor policyholder",
   },
   {

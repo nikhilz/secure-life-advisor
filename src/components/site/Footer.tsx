@@ -19,7 +19,7 @@ export function Footer() {
           </div>
           <p className="mt-4 max-w-xs text-sm opacity-80">
             Independent insurance advisors helping families and businesses secure
-            the right cover at the right price since 2008.
+            the right cover at the right price since 2017.
           </p>
         </div>
 
@@ -54,15 +54,15 @@ export function Footer() {
           <ul className="mt-4 space-y-3 text-sm opacity-85">
             <li className="flex items-start gap-2">
               <Phone className="mt-0.5 h-4 w-4 shrink-0" />
-              <span>+1 (555) 010-2030</span>
+              <span>+91 7066493999</span>
             </li>
             <li className="flex items-start gap-2">
               <Mail className="mt-0.5 h-4 w-4 shrink-0" />
-              <span>hello@futuresafe.example</span>
+              <span>operationsfuturesafe@gmail.com</span>
             </li>
             <li className="flex items-start gap-2">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0" />
-              <span>221 Atlantic Ave, Suite 400<br />New York, NY 10001</span>
+              <span>AP SHOP NO A17, PREVIA BUSSINES CENTER SANT NAGAR,  NR NEW RTO OFFICE  MOSHI Pune 412105</span>
             </li>
           </ul>
         </div>
@@ -71,7 +71,7 @@ export function Footer() {
       <div className="border-t border-brand-foreground/15">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-5 text-xs opacity-75 sm:flex-row sm:px-6 lg:px-8">
           <p>© {new Date().getFullYear()} FutureSafe Insurance Services. All rights reserved.</p>
-          <p>Licensed insurance brokerage. NPN #1234567.</p>
+          <p>Licensed insurance brokerage.</p>
         </div>
       </div>
     </footer>

@@ -44,24 +44,24 @@ function Contact() {
             <ContactBlock
               icon={<Phone />}
               label="Phone"
-              value="+1 (555) 010-2030"
-              href="tel:+15550102030"
+              value="+91 7066493999"
+              href="tel:+917066493999"
             />
             <ContactBlock
               icon={<Mail />}
               label="Email"
-              value="hello@futuresafe.example"
-              href="mailto:hello@futuresafe.example"
+              value="operationsfuturesafe@gmail.com"
+              href="mailto:operationsfuturesafe@gmail.com"
             />
             <ContactBlock
               icon={<MapPin />}
               label="Office"
-              value="221 Atlantic Ave, Suite 400, New York, NY 10001"
+              value="AP SHOP NO A17, PREVIA BUSSINES CENTER SANT NAGAR,  NR NEW RTO OFFICE  MOSHI Pune 412105"
             />
             <ContactBlock
               icon={<Clock />}
               label="Hours"
-              value="Mon–Fri 9am–7pm · Sat 10am–2pm"
+              value="Mon–Sat 9am–7pm"
             />
           </div>
           <div className="lg:col-span-3">
