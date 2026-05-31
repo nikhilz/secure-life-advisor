@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+https://futuresafeinsurance.in/sitemap.xml
